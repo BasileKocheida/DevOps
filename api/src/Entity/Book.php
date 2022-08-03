@@ -3,12 +3,15 @@
 namespace App\Entity;
 
 use App\Repository\BookRepository;
+use ApiPlatform\Metadata\ApiResource;
 use Doctrine\DBAL\Types\Types;
 use Doctrine\ORM\Mapping as ORM;
 
+#[ApiResource(mercure: true)]
 #[ORM\Entity(repositoryClass: BookRepository::class)]
 class Book
 {
+
     #[ORM\Id]
     #[ORM\GeneratedValue]
     #[ORM\Column()]
