@@ -2,8 +2,8 @@
 
 namespace App\Entity;
 
-use App\Repository\BookRepository;
 use ApiPlatform\Metadata\ApiResource;
+use App\Repository\BookRepository;
 use Doctrine\DBAL\Types\Types;
 use Doctrine\ORM\Mapping as ORM;
 
@@ -11,7 +11,6 @@ use Doctrine\ORM\Mapping as ORM;
 #[ORM\Entity(repositoryClass: BookRepository::class)]
 class Book
 {
-
         #[ORM\Id]
     #[ORM\GeneratedValue]
     #[ORM\Column()]
