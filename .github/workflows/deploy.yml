@@ -13,9 +13,9 @@ jobs:
         uses: actions/checkout@v2
       - name: Deploy-OVH
         uses: appleboy/ssh-action@master
-          with:
-            host: ${{ secrets.HOST }}
-            username: ${{ secrets.USERNAME }}
-            key: ${{ secrets.DEPLOY_KEY }}
-            port: 22
-            script: cd DevOps && git pull origin master
+        with:
+          host: ${{ secrets.HOST }}
+          username: ${{ secrets.USERNAME }}
+          key: ${{ secrets.DEPLOY_KEY }}
+          port: 22
+          script: cd DevOps && git pull origin master
